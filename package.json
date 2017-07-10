@@ -1,0 +1,31 @@
+{
+  "name": "geo-amazon",
+  "version": "0.0.0",
+  "description": "Locate the closest Amazon virtual store for a given location",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-leroux/geo-amazon.git"
+  },
+  "keywords": [
+    "Amazon",
+    "geoip",
+    "store",
+    "location",
+    "node.js"
+  ],
+  "author": "Sylvain Leroux <sylvain@chicoree.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-leroux/geo-amazon/issues"
+  },
+  "homepage": "https://github.com/s-leroux/geo-amazon#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "chai-string": "^1.4.0",
+    "mocha": "^3.4.2"
+  }
+}
