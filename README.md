@@ -24,6 +24,9 @@ iso3166-alpha2.
 
 ## Node version
 Tested with v6.6.0
+
+## Requirements
+To build the store and country database, you need gawk 4.x
  
 ## License 
 
