@@ -50,5 +50,9 @@ describe("storeFromCountry", function() {
     assert.equal(amazon.store('CH', {lang: "de"}), "www.amazon.de");
     assert.equal(amazon.store('CH', {lang: "en"}), "www.amazon.de");
   });
+  
+  it('should parse language code', function() {
+    assert.equal(amazon.store('CH', {lang: "fr-FR_BE"}), "www.amazon.fr");
+  });
 
 });
