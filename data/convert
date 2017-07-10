@@ -1,11 +1,12 @@
 #!/usr/bin/awk -f
-BEGIN {FS=" *,? *"; OFS=","}
-NF==2 {
+BEGIN {FS=" *, *"; OFS=","}
+NR==FNR {
     gsub(/"/, "", $2);
     MAP[$2]=$1;
+    next;
 }
 
-$3 ~ /[0-9]/ {
+{
     CA=MAP[$1];
     CB=MAP[$2];
 

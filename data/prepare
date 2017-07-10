@@ -22,11 +22,11 @@ FNR==NR {
 
     if ($2 in STORE) {
         if (index(FEATURE[$2],"D") && (!COUNTRY[$1]["D/C"] || COUNTRY[$1]["D/D"] > $3)) {
-            COUNTRY[$1]["D/C"] = $2;
+            COUNTRY[$1]["D/C"] = STORE[$2];
             COUNTRY[$1]["D/D"] = $3;
         }
         if (index(FEATURE[$2],"P") && (!COUNTRY[$1]["P/C"] || COUNTRY[$1]["P/D"] > $3)) {
-            COUNTRY[$1]["P/C"] = $2;
+            COUNTRY[$1]["P/C"] = STORE[$2];
             COUNTRY[$1]["P/D"] = $3;
         }
     }
