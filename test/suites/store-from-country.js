@@ -5,7 +5,7 @@ const amazon = require('../../index.js');
 describe("storeFromCountry", function() {
   it('should fallback to Amazon.com', function() {
     const store = amazon.store('XX');
-    assert.equal(store, "amazon.com");
+    assert.equal(store, "www.amazon.com");
   });
   
   it('should distinguish between physical and digital products', function() {
@@ -13,26 +13,26 @@ describe("storeFromCountry", function() {
     const store1 = amazon.store('NL', {digital: false});
     const store2 = amazon.store('NL', {digital: true});
     
-    assert.notEqual(store1, "amazon.nl");
-    assert.equal(store2, "amazon.nl");
+    assert.notEqual(store1, "www.amazon.nl");
+    assert.equal(store2, "www.amazon.nl");
   });
   
   it('should use local store if available', function() {
     const stores = {
-      FR: "amazon.fr",
-      US: "amazon.com",
-      GB: "amazon.co.uk", // XXX in iso3166 United Kingdom is GB, not UK!
-      DE: "amazon.de",
-      IT: "amazon.it",
-      IN: "amazon.in",
-      CN: "amazon.cn",
-      JP: "amazon.co.jp",
-      // NL: "amazon.nl", // digital only
-      ES: "amazon.es",
-      CA: "amazon.ca",
-      MX: "amazon.com.mx",
-      // AU: "amazon.com.au", // digital only
-      BR: "amazon.com.br",
+      FR: "www.amazon.fr",
+      US: "www.amazon.com",
+      GB: "www.amazon.co.uk", // XXX in iso3166 United Kingdom is GB, not UK!
+      DE: "www.amazon.de",
+      IT: "www.amazon.it",
+      IN: "www.amazon.in",
+      CN: "www.amazon.cn",
+      JP: "www.amazon.co.jp",
+      // NL: "www.amazon.nl", // digital only
+      ES: "www.amazon.es",
+      CA: "www.amazon.ca",
+      MX: "www.amazon.com.mx",
+      // AU: "www.amazon.com.au", // digital only
+      BR: "www.amazon.com.br",
     };
     
     for(let key of Object.keys(stores)) {
