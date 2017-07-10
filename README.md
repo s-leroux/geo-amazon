@@ -1,10 +1,10 @@
 # geo-amazon
 
 A simple tool to find the closest Amazon virtual store
-for a given location.
+given a customer country.
 
-Location can be given either as a country code, or retrived
-from an IP address using GeoIP.
+Location is given either as a country code conforming to
+iso3166-alpha2.
 
 [![Build Status](https://travis-ci.org/s-leroux/geo-amazon.png?branch=master)](https://travis-ci.org/s-leroux/geo-amazon)
 
@@ -17,10 +17,10 @@ from an IP address using GeoIP.
     const amazon = require('geo-amazon')
 
     const store = amazon.store('US');
-    const store = amazon.store('8.8.8.8');
     const store = amazon.store('AU', { digital: true});
 
-    const url = amazon.url('AU', { '*':ASIN, 'FR':FR_ASIN}, {'FR': AFFILIATE})
+    const url = amazon.url('AU', {asin:{ '*': ASIN, 'FR': FR_ASIN }});
+    const url = amazon.url('CH', {lang:'fr', asin:{ '*': ASIN, 'FR': FR_ASIN}});
 
 ## Node version
 Tested with v6.6.0
