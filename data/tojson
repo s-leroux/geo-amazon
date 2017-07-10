@@ -1,0 +1,26 @@
+#!/usr/bin/awk -f
+BEGIN {
+    FS=",";    
+}
+
+/^#/ { next }
+
+{
+    A[$1][$2]=$3;
+}
+
+END {
+    printf("{");
+    N=0;
+    for (c in A) {
+        if (N++) { printf(",") };
+        printf("\n  \"%s\": {", c);
+        F=0;
+        for(k in A[c]) {
+            if (F++) { printf(",") };
+            printf(" \"%s\":\"%s\"", k, A[c][k]); 
+        }
+        printf(" }");
+    }
+    printf("\n}\n");
+}

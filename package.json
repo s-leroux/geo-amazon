@@ -4,7 +4,9 @@
   "description": "Locate the closest Amazon virtual store for a given location",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "cd data; make",
+    "pretest": "cd data; make"
   },
   "repository": {
     "type": "git",
