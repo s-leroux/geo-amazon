@@ -43,4 +43,12 @@ describe("storeFromCountry", function() {
       assert.equal(store2, stores[key], "Wrong store for "+key+" (digital)");
     }
   });
+  
+  it('should honnor language code', function() {
+    assert.equal(amazon.store('CH', {lang: "it"}), "www.amazon.it");
+    assert.equal(amazon.store('CH', {lang: "fr"}), "www.amazon.fr");
+    assert.equal(amazon.store('CH', {lang: "de"}), "www.amazon.de");
+    assert.equal(amazon.store('CH', {lang: "en"}), "www.amazon.de");
+  });
+
 });

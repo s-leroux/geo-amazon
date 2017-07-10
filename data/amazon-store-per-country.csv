@@ -1,5 +1,5 @@
 #
-# <customer country code>;<product type>;<store country code>
+# <customer country code>;<product type>;<store country code>[;<lang>...]
 # where country codes are assumed to be iso3166-alpha2
 # and product type is either (P)hysical or (D)digital
 #
@@ -127,8 +127,8 @@ CF;P;US
 CF;D;US
 CG;P;US
 CG;D;US
-CH;P;DE
-CH;D;DE
+CH;P;DE;fr=FR;it=IT
+CH;D;DE;fr=FR;it=IT
 CI;P;US
 CI;D;US
 CI;P;US
@@ -183,8 +183,8 @@ ES;P;ES
 ES;D;ES
 ET;P;US
 ET;D;US
-EU;P;UK
-EU;D;UK
+EU;P;UK;de=DE;fr=FR;it=IT;es=ES
+EU;D;UK;de=DE;fr=FR;it=IT;es=ES
 FI;P;GB
 FI;D;GB
 FJ;P;US

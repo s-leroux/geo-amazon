@@ -12,3 +12,6 @@ MX;www.amazon.com.mx;DP
 US;www.amazon.com;DP
 AU;www.amazon.com.au;D
 BR;www.amazon.com.br;DP
+# The official iso3166 code for UK is GB
+# It doesn't cost much to add UK though
+UK;www.amazon.co.uk;DP

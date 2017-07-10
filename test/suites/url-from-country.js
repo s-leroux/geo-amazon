@@ -14,7 +14,7 @@ describe("urlFromCountry", function() {
     assert.equal(url, "https://www.amazon.fr/dp/ASIN012345/?tag=n");
   });
   
-  it('should iresolve customer country to a store', function() {
+  it('should resolve customer country to a store', function() {
     const url = amazon.url('BE', opts);
     assert.equal(url, "https://www.amazon.fr/dp/ASIN012345/?tag=n");
   });

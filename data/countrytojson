@@ -6,7 +6,11 @@ BEGIN {
 /^#/ { next }
 
 {
-    A[$1][$2]=$3;
+    A[$1][$2]["*"]=$3;
+    for(i = 4; i <= NF; ++i) {
+        split($i, lang, /=/);
+        A[$1][$2][lang[1]] = lang[2];
+    }
 }
 
 END {
@@ -18,7 +22,13 @@ END {
         F=0;
         for(k in A[c]) {
             if (F++) { printf(",") };
-            printf(" \"%s\":\"%s\"", k, A[c][k]); 
+            printf(" \"%s\": {", k);
+            L=0;
+            for(l in A[c][k]) {
+                if (L++) { printf(",") };
+                printf(" \"%s\": \"%s\"", l, A[c][k][l]);
+            }
+            printf(" }");
         }
         printf(" }");
     }
