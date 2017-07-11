@@ -42,5 +42,15 @@ describe("urlFromCountry", function() {
     });
     assert.equal(url, "http://www.amazon.co.uk/dp/ASIN012345/?tag=n");
   });
+  
+  it('should use country-specific tag (affiliate ID)', function() {
+    const options = {
+      asin: {"*":opts.asin["*"], "FR":"OTHER-ASIN"},
+      tag: { "FR": "chicoreefr-21", "US": "yesik-20" },
+    };
+    assert.equal(amazon.url('US', options), "https://www.amazon.com/dp/ASIN012345/?tag=yesik-20");
+    assert.equal(amazon.url('FR', options), "https://www.amazon.fr/dp/OTHER-ASIN/?tag=chicoreefr-21");
+    assert.equal(amazon.url('BE', options), "https://www.amazon.fr/dp/OTHER-ASIN/?tag=chicoreefr-21");
+  });
 
 });
