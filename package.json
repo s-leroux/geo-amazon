@@ -1,6 +1,6 @@
 {
   "name": "geo-amazon",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Locate the closest Amazon virtual store for a given location",
   "main": "index.js",
   "scripts": {
