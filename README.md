@@ -17,10 +17,15 @@ iso3166-alpha2.
     const amazon = require('geo-amazon')
 
     const store = amazon.store('US');
-    const store = amazon.store('AU', { digital: true});
+    const store = amazon.store('AU', { product:"D" });
+    // Product is either (D)igital, (P)hysical or (S)self-published
 
-    const url = amazon.url('AU', {asin:{ '*': ASIN, 'FR': FR_ASIN }});
-    const url = amazon.url('CH', {lang:'fr', asin:{ '*': ASIN, 'FR': FR_ASIN}});
+    const url = amazon.url('AU', {
+      asin:{ '*': ASIN, 'FR': FR_ASIN }
+    });
+    const url = amazon.url('CH', {
+      lang:'fr', asin:{ '*': ASIN, 'FR': FR_ASIN}
+    });
 
 ## Node version
 Tested with v6.6.0

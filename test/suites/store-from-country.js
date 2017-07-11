@@ -10,8 +10,8 @@ describe("storeFromCountry", function() {
   
   it('should distinguish between physical and digital products', function() {
     // Currently Amazon.nl only deliver digital products
-    const store1 = amazon.store('NL', {digital: false});
-    const store2 = amazon.store('NL', {digital: true});
+    const store1 = amazon.store('NL', {product:"P"});
+    const store2 = amazon.store('NL', {product:"D"});
     
     assert.notEqual(store1, "www.amazon.nl");
     assert.equal(store2, "www.amazon.nl");
@@ -36,8 +36,8 @@ describe("storeFromCountry", function() {
     };
     
     for(let key of Object.keys(stores)) {
-      const store1 = amazon.store(key, {digital: false});
-      const store2 = amazon.store(key, {digital: true});
+      const store1 = amazon.store(key, {product:"P"});
+      const store2 = amazon.store(key, {product:"D"});
 
       assert.equal(store1, stores[key], "Wrong store for "+key+" (physical)");
       assert.equal(store2, stores[key], "Wrong store for "+key+" (digital)");
