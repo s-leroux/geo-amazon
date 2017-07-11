@@ -1,17 +1,17 @@
-CN;www.amazon.cn;DP
-IN;www.amazon.in;DP
-JP;www.amazon.co.jp;DP
-FR;www.amazon.fr;DP
-DE;www.amazon.de;DP
-IT;www.amazon.it;DP
-NL;www.amazon.nl;D
-ES;www.amazon.es;DP
-GB;www.amazon.co.uk;DP
-CA;www.amazon.ca;DP
-MX;www.amazon.com.mx;DP
-US;www.amazon.com;DP
-AU;www.amazon.com.au;D
-BR;www.amazon.com.br;DP
+CN;zh;www.amazon.cn;DP
+IN;hi;www.amazon.in;DP
+JP;ja;www.amazon.co.jp;DP
+FR;fr;www.amazon.fr;DP
+DE;de;www.amazon.de;DP
+IT;it;www.amazon.it;DP
+NL;nl;www.amazon.nl;D
+ES;es;www.amazon.es;DP
+GB;en;www.amazon.co.uk;DP
+CA;en;www.amazon.ca;DP
+MX;es;www.amazon.com.mx;DP
+US;en;www.amazon.com;DP
+AU;en;www.amazon.com.au;D
+BR;pt;www.amazon.com.br;DP
 # The official iso3166 code for UK is GB
 # It doesn't cost much to add UK though
-UK;www.amazon.co.uk;DP
+UK;en;www.amazon.co.uk;DP
