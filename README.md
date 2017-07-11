@@ -26,6 +26,9 @@ iso3166-alpha2.
     const url = amazon.url('CH', {
       lang:'fr', asin:{ '*': ASIN, 'FR': FR_ASIN}
     });
+    // The prefered langage string is compatible with the
+    // http Accept-Language header
+    const url = amazon.url('CH', { lang:'fr;q=0.5;de;q=0.9' });
 
 ## Node version
 Tested with v6.6.0

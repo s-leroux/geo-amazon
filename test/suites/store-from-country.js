@@ -51,6 +51,11 @@ describe("storeFromCountry", function() {
     assert.equal(amazon.store('CH', {lang: "en"}), "www.amazon.de");
   });
   
+  it('should choose prefered language when available', function() {
+    assert.equal(amazon.store('CH', {lang: "it;q=1.0,fr;q=0.9"}), "www.amazon.it");
+    assert.equal(amazon.store('CH', {lang: "fr;q=0.9,it;q=1.0"}), "www.amazon.it");
+  });
+  
   it('should parse language code', function() {
     assert.equal(amazon.store('CH', {lang: "fr-FR_BE"}), "www.amazon.fr");
   });
